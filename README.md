@@ -38,6 +38,9 @@ tp15-monitoring/
 └── logs/
     └── tp15-application.log
 ```
+## Diagramme d'Architecture du Système de Monitoring
+<img width="4637" height="1155" alt="diagramme" src="https://github.com/user-attachments/assets/76ceced3-4ea4-4292-a786-e806b38d22d5" />
+
 
 ##  Configuration
 
