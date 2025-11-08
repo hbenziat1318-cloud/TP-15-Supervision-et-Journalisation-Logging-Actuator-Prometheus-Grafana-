@@ -1,0 +1,21 @@
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+
+scrape_configs:
+  # Prometheus lui-même
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+    scrape_interval: 10s
+
+  # Votre application Spring Boot
+  - job_name: 'spring-boot-app'
+    metrics_path: '/actuator/prometheus'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['localhost:8080']
+        labels:
+          application: 'TP15 Monitoring App'
+          environment: 'development'
+          version: '1.0.0'
